@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türchen 24 - Feliz Navidad!</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Styling zur Konsistenz */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcf0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .content-box {
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto 20px auto; 
+            padding: 30px;
+            border: 5px solid #D4AF37; /* Gold-Rand */
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #B22222; /* Kräftiges Rot */
+            border-bottom: 3px solid #D4AF37; /* Goldene Linie */
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .puzzle-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 0 20px;
+            font-weight: 500;
+        }
+        .solution-toggle {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #8B0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px #5e0000;
+        }
+        .solution-toggle:hover {
+            background-color: #B22222;
+            transform: translateY(-2px);
+            box-shadow: 0 6px #5e0000;
+        }
+        .solution-box {
+            margin-top: 30px;
+            padding: 25px;
+            border: 2px solid #8B0000;
+            background-color: #fff0f0;
+            border-radius: 10px;
+            display: none; 
+            text-align: center;
+        }
+        .navigation-bar {
+            width: 100%;
+            max-width: 800px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .final-message {
+            font-size: 1.4rem;
+            color: #8B0000;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .back-link {
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h2>Türchen 24: Der Wunsch zum Heiligen Abend 🎄</h2>
+        
+        <p class="puzzle-text">
+            <strong>Dein heutiges Rätsel: Der wichtigste Wunsch</strong>
+            <br><br>
+            Das gesuchte lateinische Wort steht für den Zustand der **tiefen Ruhe und Eintracht**, den sich die Menschen in der Weihnachtszeit am meisten wünschen.
+            <br><br>
+            Die Römer kannten dieses Wort sehr gut, da es die Grundlage für ein langes, glückliches Zeitalter war, in dem über 200 Jahre lang Ruhe herrschte.
+            <br><br>
+            **Wie lautet das lateinische Wort (drei Buchstaben) für diesen Zustand?**
+        </p>
+        
+        <button onclick="showSolution()" class="solution-toggle">
+            Lösung anzeigen & Fröhliche Weihnachten!
+        </button>
+
+        <div id="solution" class="solution-box">
+            <p class="font-bold text-xl text-[#8B0000]">Die Antwort lautet:</p>
+            <p class="text-3xl font-extrabold mt-3 text-[#D4AF37] shadow-sm">**PAX**</p>
+            <p class="text-lg mt-3">
+                **Übersetzung:** Frieden.
+                <br>
+                **Bedeutung:** Das Wort **PAX** stand im Zentrum der *Pax Romana* (Römischer Frieden) und begegnet uns heute in Wörtern wie **"Pazifist"**. Ein tolles Wort, um Latein zu lernen!
+            </p>
+            <p class="final-message">
+                **Und nun der Weihnachtsgruß: Felix Natalis!** (Fröhliche Geburt!)
+                <br>
+                Wir hoffen, du hattest viel Spaß mit dem Kalender und siehst dich nächstes Jahr im Lateinunterricht!
+            </p>
+        </div>
+
+    </div>
+    
+    <!-- Separate Navigationsleiste -->
+    <div class="navigation-bar">
+        <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
+    </div>
+
+    <script>
+        function showSolution() {
+            const solutionBox = document.getElementById('solution');
+            const button = document.querySelector('.solution-toggle');
+            if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
+                solutionBox.style.display = 'block';
+                button.textContent = 'Geschafft! (Lösung verstecken)';
+            } else {
+                solutionBox.style.display = 'none';
+                button.textContent = 'Lösung anzeigen & Fröhliche Weihnachten!';
+            }
+        }
+    </script>
+
+</body>
+</html>

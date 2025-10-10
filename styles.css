@@ -1,0 +1,402 @@
+/* ==============================================
+   Latein-Adventskalender - Zentrale CSS-Datei
+   ============================================== */
+
+/* --- Globale Basis-Styles --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- KALENDER-ÜBERSICHTSSEITE (index.html) --- */
+body.calendar-overview {
+    background: linear-gradient(135deg, #2c3e50 0%, #0d1a2b 100%);
+    color: #E0E0E0;
+    text-align: center;
+}
+
+body.calendar-overview h1 {
+    color: #D4AF37;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #8B0000;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body.calendar-overview p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Responsive Überschriften für Kalender */
+@media (max-width: 768px) {
+    body.calendar-overview h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body.calendar-overview h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* --- Kalender-Grid --- */
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+/* Responsive Grid */
+@media (max-width: 968px) {
+    #calendar-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    #calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    #calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Adventskalender-Türchen --- */
+.advent-door {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    text-decoration: none;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    
+    /* Stil für gesperrte Türchen (LOCKED) */
+    background: linear-gradient(to bottom right, #545d68, #3b424d);
+    border: 2px solid #545d68;
+    box-shadow: 0 5px #2c323a;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Responsive Türchen-Größe */
+@media (max-width: 768px) {
+    .advent-door {
+        height: 100px;
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .advent-door {
+        height: 80px;
+        font-size: 1.5em;
+    }
+}
+
+/* Stil für AKTIVE Türchen */
+.advent-door.active {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    background: linear-gradient(to bottom right, #B22222, #8B0000);
+    border: 3px solid #D4AF37;
+    box-shadow: 0 5px #8B0000;
+}
+
+.advent-door.active:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(212, 175, 55, 0.5);
+}
+
+.advent-door.active:active {
+    transform: translateY(-1px) scale(1.01);
+}
+
+/* --- TAGESSEITEN (tag_X.html) --- */
+body:not(.calendar-overview) {
+    background-color: #fcfcf0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Tagesseiten Content-Box --- */
+.content-box {
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto 20px auto;
+    padding: 30px;
+    border: 5px solid #D4AF37;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        padding: 20px;
+        margin: 20px auto 15px auto;
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+/* --- Überschriften in Tagesseiten --- */
+h2 {
+    color: #8B0000;
+    border-bottom: 2px dashed #D4AF37;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em;
+        padding-bottom: 10px;
+    }
+}
+
+/* --- Rätsel-Text --- */
+.puzzle-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .puzzle-text {
+        font-size: 1.05rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 5px;
+    }
+}
+
+.puzzle-text ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.puzzle-text li {
+    margin-bottom: 8px;
+}
+
+/* --- Lösungs-Toggle-Button --- */
+.solution-toggle {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #B22222;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.solution-toggle:hover {
+    background-color: #8B0000;
+    transform: translateY(-2px);
+}
+
+.solution-toggle:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .solution-toggle {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Lösungs-Box --- */
+.solution-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #D4AF37;
+    background-color: #fff8e1;
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .solution-box {
+        padding: 15px;
+    }
+}
+
+/* --- Navigationsleiste --- */
+.navigation-bar {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .navigation-bar {
+        padding: 12px;
+        gap: 10px;
+    }
+}
+
+.back-link,
+.nav-link {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.back-link:hover,
+.nav-link:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+.back-link:active,
+.nav-link:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .back-link,
+    .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Utility-Klassen für Lösungsbox --- */
+.font-bold {
+    font-weight: bold;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+/* --- Accessibility Improvements --- */
+.solution-toggle:focus,
+.back-link:focus,
+.nav-link:focus,
+.advent-door.active:focus {
+    outline: 3px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* --- Print-Styles --- */
+@media print {
+    body {
+        background: white !important;
+        color: black;
+    }
+    
+    .navigation-bar,
+    .solution-toggle {
+        display: none;
+    }
+    
+    .solution-box {
+        display: block !important;
+        border: 1px solid #000;
+    }
+}
+
+/* Reduzierte Bewegung für Nutzer mit entsprechenden Einstellungen */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türchen 8 - Römische Thermen</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Styling zur Konsistenz */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcf0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .content-box {
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto 20px auto; 
+            padding: 30px;
+            border: 5px solid #D4AF37; /* Gold-Rand */
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #8B0000;
+            border-bottom: 2px dashed #D4AF37;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .puzzle-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .solution-toggle {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #B22222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .solution-toggle:hover {
+            background-color: #8B0000;
+            transform: translateY(-1px);
+        }
+        .solution-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #D4AF37;
+            background-color: #fff8e1;
+            border-radius: 5px;
+            display: none; 
+            text-align: center;
+        }
+        .navigation-bar {
+            width: 100%;
+            max-width: 800px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .back-link {
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h2>Türchen 8: Der heißeste Raum der Römer 🔥</h2>
+        
+        <p class="puzzle-text">
+            <strong>Dein heutiges Rätsel: Wo ist die Hitze?</strong>
+            <br><br>
+            Die römischen Thermen waren riesig und besaßen verschiedene Räume:
+            <ul>
+                <li>Den Umkleideraum (*Apodyterium*)</li>
+                <li>Den lauwarmen Raum (*Tepidarium*)</li>
+                <li>Den kalten Raum (*Frigidarium*)</li>
+            </ul>
+            Der vierte und wichtigste Raum war der **heißeste** Raum, oft mit Dampfbad-Funktion. Sein lateinischer Name beginnt mit **C** und ist die Wurzel des modernen wissenschaftlichen Begriffs für **"Wärmeinhalt"** oder **"Wärmeeinheit"** in der Physik.
+            <br><br>
+            **Wie hieß der heißeste Raum der römischen Thermen?**
+        </p>
+        
+        <button onclick="showSolution()" class="solution-toggle">
+            Lösung anzeigen & mehr erfahren
+        </button>
+
+        <div id="solution" class="solution-box">
+            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: CALDARIUM</p>
+            <p class="text-sm mt-3">
+                <strong>Latein-Wissen des Tages:</strong>
+                <br>
+                Das **Caldarium** war der Heißraum (Schwitzen und Dampfbad). Es leitet sich vom lateinischen Wort **"calidus"** (warm, heiß) ab.
+                <br>
+                Davon stammen moderne Wörter wie:
+                <br>
+                - **Kalorien (Caloria):** Die Einheit der Wärmeenergie.
+                <br>
+                - **caldo (span./ital.):** warm (oft für Brühe).
+                <br><br>
+                Die Römer heizten diese Räume mit der **Hypokaustenheizung**, einem genialen System, bei dem heiße Luft unter dem Fußboden zirkulierte!
+            </p>
+        </div>
+
+    </div>
+    
+    <!-- Separate Navigationsleiste -->
+    <div class="navigation-bar">
+        <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
+    </div>
+
+    <script>
+        function showSolution() {
+            const solutionBox = document.getElementById('solution');
+            const button = document.querySelector('.solution-toggle');
+            if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
+                solutionBox.style.display = 'block';
+                button.textContent = 'Lösung verstecken';
+            } else {
+                solutionBox.style.display = 'none';
+                button.textContent = 'Lösung anzeigen & mehr erfahren';
+            }
+        }
+    </script>
+
+</body>
+</html>
