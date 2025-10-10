@@ -32,16 +32,24 @@ function initializeCalendar() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0=Jan, 11=Dez
     
-    // TESTMODUS: Setzen Sie hier den gewünschten Tag
-    // Für Produktion: Kommentieren Sie die nächste Zeile aus und aktivieren Sie die übernächste
+    // ============================================================
+    // WICHTIG: TESTMODUS EIN/AUS
+    // ============================================================
+    // Für DEMO/TEST: Alle 24 Türchen sind geöffnet
+    // Kommentieren Sie die nächste Zeile aus für den Produktivbetrieb!
     const currentDay = 24;
+    
+    // Für PRODUKTIVBETRIEB: Türchen öffnen sich täglich ab 1. Dezember
+    // Entfernen Sie das "//" vor der nächsten Zeile:
     // const currentDay = today.getDate();
+    // ============================================================
     
     // Prüfen, ob Dezember (Monat 11)
     const isDecember = currentMonth === 11;
     
     if (!isDecember) {
-        console.log('Testmodus aktiv: Türchen 1-' + currentDay + ' sind freigeschaltet.');
+        console.log('⚠️ TESTMODUS AKTIV: Türchen 1-' + currentDay + ' sind freigeschaltet.');
+        console.log('Der Kalender ist außerhalb des Dezembers normalerweise gesperrt.');
     }
     
     // Türchen aktivieren oder sperren
