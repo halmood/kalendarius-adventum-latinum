@@ -3,108 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türchen 3 - Schule und Schreiben</title> 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Styling zur Konsistenz mit tag_1.html und tag_2.html */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfcf0;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .content-box {
-            max-width: 800px;
-            width: 100%;
-            margin: 40px auto 20px auto; 
-            padding: 30px;
-            border: 5px solid #D4AF37; /* Gold-Rand */
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            color: #8B0000;
-            border-bottom: 2px dashed #D4AF37;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .puzzle-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            text-align: left;
-            padding: 0 20px;
-        }
-        .solution-toggle {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: #B22222;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.2s;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .solution-toggle:hover {
-            background-color: #8B0000;
-            transform: translateY(-1px);
-        }
-        .solution-box {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #D4AF37;
-            background-color: #fff8e1;
-            border-radius: 5px;
-            display: none; 
-            text-align: center;
-        }
-        .navigation-bar {
-            width: 100%;
-            max-width: 800px;
-            padding: 15px;
-            background-color: #333;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .back-link {
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            background-color: #000;
-        }
-    </style>
+    <title>Türchen 3: [Dein Rätsel-Titel]</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
     <div class="content-box">
-        <h2>Türchen 3: Schreibblock der Antike 📜</h2>
+        
+        <h2>Türchen 3: Wo bin ich? Die Grenzen des Imperiums 🗺️</h2>
+        
+        <img src="Bilder/tag03.jpg" alt="Antike Karte oder Skizze des Römischen Reiches in seiner größten Ausdehnung" class="raetsel-visual">
         
         <p class="puzzle-text">
-            <strong>Dein heutiges Rätsel: Das wiederverwendbare Heft</strong>
+            <strong>Dein Rätsel für Tag 3:</strong>
+            <br><br><br>
+            Ich bin das berühmte lateinische Wort, das das **Herrschaftsgebiet** Roms beschreibt. Ich komme von dem Wort "imperare" (befehlen).
             <br><br>
-            Römische Schüler hatten keine Hefte aus Papier. Stattdessen benutzten sie eine Art **wiederverwendbaren Notizblock**. Dieser bestand aus Holztafeln, die mit einer dünnen Schicht aus **dunklem Wachs** überzogen waren.
-            <br>
-            Man schrieb mit einem spitzen Stift darauf, und wenn man fertig war, konnte man die Tafel einfach wieder glatt streichen!
-            <br><br>
-            <strong>Wie lautete der lateinische Name für diese Schreibtafel?</strong>
-            <br>
-            (Gesuchtes Wort: Zwei Buchstaben, dann vier Buchstaben.)
+            Ich war riesig und umfasste große Teile Europas, Nordafrikas und des Nahen Ostens. Mein Name ist auch heute noch gängig.
+            <br><br><br>
+            <strong>Kleiner Tipp:</strong> Man nannte das gesamte Reich auch "Pax [Lösung]".
         </p>
         
         <button onclick="showSolution()" class="solution-toggle">
@@ -112,21 +29,20 @@
         </button>
 
         <div id="solution" class="solution-box">
-            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: TABULA</p>
+            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: IMPERIUM</p>
             <p class="text-sm mt-3">
-                <strong>Latein-Wissen des Tages:</strong>
-                <br>
-                Die **Tabula** (oft auch **Tabella**) war die Wachstafel. Das spitze Schreibgerät hieß **Stilus**.
-                <br>
-                Auch heute verwenden wir in der Schule moderne **Tablets**. Der lateinische Ursprung ist klar: Die "Tabula" war im Grunde der erste digitale Notizblock der Welt!
+                <strong>Latein-Wissen des Tages:</strong> **Imperium** bedeutet **Herrschaft/Reich**.
+                <br><br>
+                Das bekannteste Beispiel ist das **Römische Imperium**. Auch heute noch verwenden wir den Begriff für große Herrschaftsbereiche oder mächtige Unternehmen.
             </p>
         </div>
-
+        
     </div>
     
-    <!-- Separate Navigationsleiste -->
     <div class="navigation-bar">
         <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
+        <a href="tag_2.html" class="nav-link">← Vorheriger Tag</a>
+        <a href="tag_4.html" class="nav-link">Nächster Tag →</a>
     </div>
 
     <script>
@@ -142,6 +58,6 @@
             }
         }
     </script>
-
+    
 </body>
 </html>
