@@ -4,74 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türchen 2 - Herrscher des Himmels</title> 
-    <link rel="stylesheet" href="styles.css">
     
-    <script>
-        function toggleSolution() {
-            const solutionBox = document.getElementById('solution');
-            if (solutionBox.style.display === 'block') {
-                solutionBox.style.display = 'none';
-            } else {
-                solutionBox.style.display = 'block';
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="content-box">
-    
-    <h2>Türchen 2: Der Herrscher des Himmels ⚡</h2>    
-    <img src="Bilder/tag02.jpg" alt="Darstellung einer römischen Alltagsszene oder eines typischen römischen Gebäudes" class="raetsel-visual">
-    
-    <p class="puzzle-text">
-        <strong>Dein heutiges Rätsel: Wer beherrscht das Wetter?</strong>
-        <br><br>
-        Ich bin der oberste Gott der Römer, der König des Himmels und Herr über Blitz und Donner. Manchmal werde ich mit dem griechischen Gott Zeus verglichen.
-        <br>
-        Mein Name steckt im **lateinischen Wort für Tag** (**diēs**) und ist auch der Namensgeber für einen Wochentag in vielen Sprachen (z.B. Dienstag/Tuesday, aber noch deutlicher im französischen **jeudi** und spanischen **jueves**).
-        <br><br>
-        <strong>Wie lautet mein lateinischer Name?</strong>
-        <br>
-        (Gesucht ist der Gott, nicht das Wort für Tag.)
-    </p>
-    
-    <button onclick="showSolution()" class="solution-toggle">
-        Lösung anzeigen & mehr erfahren
-    </button>
-
-    <div id="solution" class="solution-box">
-        <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: JUPITER</p>
-        <p class="text-sm mt-3">
-            <strong>Latein-Wissen des Tages:</strong>
-            <br>
-            **Jupiter** war der Göttervater. Sein Name stammt von der alten Wurzel **"Dieus-pater"** ab, was **"Vater des Himmels/Tages"** bedeutet. 
-            <br>
-            Latein ist überall: Er hat auch dem größten Planeten in unserem Sonnensystem seinen Namen gegeben!
-        </p>
-    </div>
-
-    <button class="solution-toggle" onclick="toggleSolution()">
-        Lösung anzeigen & mehr erfahren
-    </button>
-
-    <div id="solution" class="solution-box">
+    <div class="content-box">
         
-        <p class="text-xl font-bold">Die Antwort ist: [LÖSUNG]</p>
+        <h2>Türchen 2: Der Herrscher des Himmels ⚡</h2>
         
-        <p class="mt-3">
-            <span class="font-bold">Latein-Wissen des Tages:</span> [Erklärung zur Lösung, z.B. Was der lateinische Begriff bedeutet und wo er heute noch vorkommt.]
+        <img src="Bilder/tag02.jpg" alt="Darstellung des römischen Gottes Jupiter mit Blitzbündel oder Adler" class="raetsel-visual">
+        
+        <p class="puzzle-text">
+            <strong>Dein heutiges Rätsel: Wer beherrscht das Wetter?</strong>
+            <br><br>
+            Ich bin der oberste Gott der Römer, der König des Himmels und Herr über Blitz und Donner. Manchmal werde ich mit dem griechischen Gott Zeus verglichen.
+            <br>
+            Mein Name steckt im **lateinischen Wort für Tag** (**diēs**) und ist auch der Namensgeber für einen Wochentag in vielen Sprachen (z.B. Dienstag/Tuesday, aber noch deutlicher im französischen **jeudi** und spanischen **jueves**).
+            <br><br>
+            <strong>Wie lautet mein lateinischer Name?</strong>
+            <br>
+            (Gesucht ist der Gott, nicht das Wort für Tag.)
         </p>
         
+        <button onclick="showSolution()" class="solution-toggle">
+            Lösung anzeigen & mehr erfahren
+        </button>
+
+        <div id="solution" class="solution-box">
+            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: JUPITER</p>
+            <p class="text-sm mt-3">
+                <strong>Latein-Wissen des Tages:</strong>
+                <br>
+                **Jupiter** war der Göttervater. Sein Name stammt von der alten Wurzel **"Dieus-pater"** ab, was **"Vater des Himmels/Tages"** bedeutet.
+                <br>
+                Latein ist überall: Er hat auch dem größten Planeten in unserem Sonnensystem seinen Namen gegeben!
+            </p>
+        </div>
+
+    </div>
+    
+    <div class="navigation-bar">
+        <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
     </div>
 
-</div>
-
-<div class="navigation-bar">
-    <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
-    <a href="tag_1.html" class="nav-link">← Vorheriger Tag</a>
-    <a href="tag_3.html" class="nav-link">Nächster Tag →</a>
-</div>
+    <script src="script.js"></script>
 
 </body>
 </html>
