@@ -3,9 +3,16 @@
    ============================================== */
 
 /* --- Globale Basis-Styles --- */
+
 * {
     box-sizing: border-box;
 }
+
+img {
+    max-width: 100%; /* Wichtig: Stellt sicher, dass kein Bild breiter als sein Container ist */
+    height: auto;   /* Verhindert Verzerrung */
+}
+
 
 body {
     font-family: 'Inter', sans-serif;
