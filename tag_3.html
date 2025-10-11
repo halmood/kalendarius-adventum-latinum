@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türchen 3: [Dein Rätsel-Titel]</title>
+    <title>Türchen 3 - Schule und Schreiben</title> 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
     <div class="content-box">
         
-        <h2>Türchen 3: Wo bin ich? Die Grenzen des Imperiums 🗺️</h2>
+        <h2>Türchen 3: Schreibblock der Antike 📜</h2>
         
-        <img src="Bilder/tag03.jpg" alt="Antike Karte oder Skizze des Römischen Reiches in seiner größten Ausdehnung" class="raetsel-visual">
+        <img src="Bilder/tag03.jpg" alt="Römische Schüler mit einer Wachstafel (Tabula) oder eine Szene aus einer römischen Schule" class="raetsel-visual">
         
         <p class="puzzle-text">
-            <strong>Dein Rätsel für Tag 3:</strong>
-            <br><br><br>
-            Ich bin das berühmte lateinische Wort, das das **Herrschaftsgebiet** Roms beschreibt. Ich komme von dem Wort "imperare" (befehlen).
+            <strong>Dein heutiges Rätsel: Das wiederverwendbare Heft</strong>
             <br><br>
-            Ich war riesig und umfasste große Teile Europas, Nordafrikas und des Nahen Ostens. Mein Name ist auch heute noch gängig.
-            <br><br><br>
-            <strong>Kleiner Tipp:</strong> Man nannte das gesamte Reich auch "Pax [Lösung]".
+            Römische Schüler hatten keine Hefte aus Papier. Stattdessen benutzten sie eine Art **wiederverwendbaren Notizblock**. Dieser bestand aus Holztafeln, die mit einer dünnen Schicht aus **dunklem Wachs** überzogen waren.
+            <br>
+            Man schrieb mit einem spitzen Stift darauf, und wenn man fertig war, konnte man die Tafel einfach wieder glatt streichen!
+            <br><br>
+            <strong>Wie lautete der lateinische Name für diese Schreibtafel?</strong>
+            <br>
+            (Gesuchtes Wort: Zwei Buchstaben, dann vier Buchstaben.)
         </p>
         
         <button onclick="showSolution()" class="solution-toggle">
@@ -29,35 +31,23 @@
         </button>
 
         <div id="solution" class="solution-box">
-            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: IMPERIUM</p>
+            <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: TABULA</p>
             <p class="text-sm mt-3">
-                <strong>Latein-Wissen des Tages:</strong> **Imperium** bedeutet **Herrschaft/Reich**.
-                <br><br>
-                Das bekannteste Beispiel ist das **Römische Imperium**. Auch heute noch verwenden wir den Begriff für große Herrschaftsbereiche oder mächtige Unternehmen.
+                <strong>Latein-Wissen des Tages:</strong>
+                <br>
+                Die **Tabula** (oft auch **Tabella**) war die Wachstafel. Das spitze Schreibgerät hieß **Stilus**.
+                <br>
+                Auch heute verwenden wir in der Schule moderne **Tablets**. Der lateinische Ursprung ist klar: Die "Tabula" war im Grunde der erste digitale Notizblock der Welt!
             </p>
         </div>
-        
+
     </div>
     
     <div class="navigation-bar">
         <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
-        <a href="tag_2.html" class="nav-link">← Vorheriger Tag</a>
-        <a href="tag_4.html" class="nav-link">Nächster Tag →</a>
     </div>
 
-    <script>
-        function showSolution() {
-            const solutionBox = document.getElementById('solution');
-            const button = document.querySelector('.solution-toggle');
-            if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
-                solutionBox.style.display = 'block';
-                button.textContent = 'Lösung verstecken';
-            } else {
-                solutionBox.style.display = 'none';
-                button.textContent = 'Lösung anzeigen & mehr erfahren';
-            }
-        }
-    </script>
-    
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -3,108 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türchen 9 - Veni Vidi Vici</title> 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Styling zur Konsistenz */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfcf0;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .content-box {
-            max-width: 800px;
-            width: 100%;
-            margin: 40px auto 20px auto; 
-            padding: 30px;
-            border: 5px solid #D4AF37; /* Gold-Rand */
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            color: #8B0000;
-            border-bottom: 2px dashed #D4AF37;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .puzzle-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            text-align: left;
-            padding: 0 20px;
-        }
-        .solution-toggle {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: #B22222;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.2s;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .solution-toggle:hover {
-            background-color: #8B0000;
-            transform: translateY(-1px);
-        }
-        .solution-box {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #D4AF37;
-            background-color: #fff8e1;
-            border-radius: 5px;
-            display: none; 
-            text-align: center;
-        }
-        .navigation-bar {
-            width: 100%;
-            max-width: 800px;
-            padding: 15px;
-            background-color: #333;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .back-link {
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            background-color: #000;
-        }
-    </style>
+    <title>Türchen 9 - Cäsars Telegramm</title> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="content-box">
-        <h2>Türchen 9: Ich kam, sah und ...? ⚔️</h2>
+        
+        <h2>Türchen 9: Das berühmteste Zitat der Antike ⚔️</h2>
+        
+        <img src="Bilder/tag09.jpg" alt="Abbildung von Julius Cäsar oder einer römischen Schlachtszene" class="raetsel-visual">
         
         <p class="puzzle-text">
-            <strong>Dein heutiges Rätsel: Der Dreiklang des Triumphs</strong>
+            <strong>Dein heutiges Rätsel: Das Drei-Wort-Telegramm</strong>
             <br><br>
-            Als der berühmte römische Feldherr Julius Cäsar im Jahr 47 v. Chr. einen schnellen Sieg über seine Gegner in Kleinasien (heutige Türkei) errungen hatte, schrieb er nur drei lateinische Worte in einem Brief nach Rom, um seine Effizienz zu demonstrieren.
-            <br><br>
-            Die ersten beiden Worte lauten: **"Veni"** (Ich kam) und **"Vidi"** (Ich sah).
-            <br><br>
-            **Wie lautet das dritte Wort, das in Lateinisch "Ich siegte" bedeutet und diesen Spruch zu einem weltberühmten Ausdruck des schnellen Erfolgs macht?**
+            Der römische Feldherr Julius Cäsar hat einmal einen seiner Siege so knapp und prägnant zusammengefasst, dass der Satz heute noch weltberühmt ist: **"Veni, Vidi, [???]"**
             <br>
-            *(Der Spruch wurde später auf einem Schild bei seinem Triumphzug getragen!)*
+            Er schickte dieses "Telegramm" nach einem Blitzsieg im Jahr 47 v. Chr. an einen Freund in Rom. Der Satz bedeutet übersetzt: **"Ich kam, ich sah, ich siegte."**
+            <br><br>
+            **Wie lautet das dritte Wort des berühmten Zitats?**
+            <br>
+            (Gesuchtes Wort: Vier Buchstaben, beginnt mit V.)
         </p>
         
         <button onclick="showSolution()" class="solution-toggle">
@@ -124,24 +43,11 @@
 
     </div>
     
-    <!-- Separate Navigationsleiste -->
     <div class="navigation-bar">
         <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
     </div>
 
-    <script>
-        function showSolution() {
-            const solutionBox = document.getElementById('solution');
-            const button = document.querySelector('.solution-toggle');
-            if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
-                solutionBox.style.display = 'block';
-                button.textContent = 'Lösung verstecken';
-            } else {
-                solutionBox.style.display = 'none';
-                button.textContent = 'Lösung anzeigen & mehr erfahren';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
