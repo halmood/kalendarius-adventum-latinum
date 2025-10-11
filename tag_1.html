@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <title>Türchen 1: Wer bin ich? Das wichtigste Wort</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
- 
+
     <div class="content-box">
-        <!-- Neuer, neutraler Titel -->
         <h2>Türchen 1: Wer bin ich? Das wichtigste Wort 💡</h2>
-        <img src="Bilder/tag01.jpg"alt="Antikes Bild, das Selbstbezogenheit symbolisiert" class="raetsel-visual">
+        <img src="Bilder/tag01.jpg" alt="Antikes Bild, das Selbstbezogenheit symbolisiert" class="raetsel-visual">        
         <p class="puzzle-text">
             <strong>Dein erstes Rätsel: Das wichtigste Wort</strong>
             <br><br>
@@ -24,7 +24,7 @@
         <button onclick="showSolution()" class="solution-toggle">
             Lösung anzeigen & mehr erfahren
         </button>
- 
+
         <div id="solution" class="solution-box">
             <p class="font-bold text-xl text-[#8B0000]">Die Antwort ist: EGO</p>
             <p class="text-sm mt-3">
@@ -33,27 +33,14 @@
                 Deshalb sprechen wir von **Egoismus** (Selbstsucht) oder einem **Egotrip**! Ein perfektes Beispiel dafür, wie Latein in unserer heutigen Sprache weiterlebt.
             </p>
         </div>
- 
+
     </div>
     
-    <!-- Separate Navigationsleiste -->
     <div class="navigation-bar">
         <a href="index.html" class="back-link">← Zurück zur Adventskalender-Übersicht</a>
     </div>
- 
-    <script>
-        function showSolution() {
-            const solutionBox = document.getElementById('solution');
-            const button = document.querySelector('.solution-toggle');
-            if (solutionBox.style.display === 'none' || solutionBox.style.display === '') {
-                solutionBox.style.display = 'block';
-                button.textContent = 'Lösung verstecken';
-            } else {
-                solutionBox.style.display = 'none';
-                button.textContent = 'Lösung anzeigen & mehr erfahren';
-            }
-        }
-    </script>
- 
+
+    <script src="script.js"></script>
+
 </body>
 </html>
