@@ -37,7 +37,7 @@ function initializeCalendar() {
     // ============================================================
     // Für DEMO/TEST: Alle 24 Türchen sind geöffnet
     // Kommentieren Sie die nächste Zeile aus für den Produktivbetrieb!
-    const currentDay = 24;
+    //const currentDay = 24;
     
     // Für PRODUKTIVBETRIEB: Türchen öffnen sich täglich ab 1. Dezember
     // Entfernen Sie das "//" vor der nächsten Zeile:
